@@ -3,12 +3,9 @@
   <ul>
     <% @emails.each do |e| %>
       <li>
-        <%= link_to(e.display_text,person_email_path(@person,e)) %>
+        <%= link_to(e.display_text,person_emails_path(@person,e)) %>
         <%= link_to("[edit]",edit_person_email_path(@person,e), method: :get) %>
-        <%= link_to("[delete]",person_email_path(@person,e), method: :delete, data: { confirm: 'Are you sure?' }) %>
-        <% if e.comments.present? %>
-        <pre><%= "Optional comment: #{e.comments}"%></pre>
-        <% end %>
+        <%= link_to("[delete]",person_emails_path(@person,e), method: :delete, data: { confirm: 'Are you sure?' }) %>
       </li>
     <%end%>
   </ul>
