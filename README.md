@@ -13,4 +13,3 @@ Each contact can have:
 Then we need to index all our contacts. We should add a small bar at the bottom of the page to access contacts whose name starts by a given letter.
 
 Validate the phone number and email address
-
