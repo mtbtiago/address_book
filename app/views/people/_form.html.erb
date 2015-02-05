@@ -1,0 +1,12 @@
+<%= form_for @person, :html => { :multipart => true } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, size: 12 %>
+  <br>
+  <%= f.label :address %>
+  <%= f.text_field :address, size: 24 %>
+  <br>
+
+  <%= f.submit 'Save' %>
+  <%= link_to("Cancel",people_path) %>
+
+<% end %>

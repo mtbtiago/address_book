@@ -1,0 +1,8 @@
+<h1>Info about ...</h1>
+<h2><%="Person: #{@person.full_name}"%></h2>
+<%= @email.display_text %>
+<%= link_to("[edit]",edit_person_email_path(@person,@email), method: :get) %>
+<%= link_to("[delete]",person_email_path(@person,@email), method: :delete, data: { confirm: 'Are you sure?' }) %>
+<h4>
+  <div class="button_actions"><%= link_to("This person emails",person_emails_path(@person)) %></div>
+</h4>

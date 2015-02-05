@@ -1,0 +1,18 @@
+<h2>phones for <%=link_to(@person.full_name,person_path(@person))%></h1>
+<% if !@phones.empty? %>
+  <ul>
+    <% @phones.each do |e| %>
+      <li>
+        <%= link_to(e.display_text,person_phone_path(@person,e)) %>
+        <%= link_to("[edit]",edit_person_phone_path(@person,e), method: :get) %>
+        <%= link_to("[delete]",person_phone_path(@person,e), method: :delete, data: { confirm: 'Are you sure?' }) %>
+        <% if e.comments.present? %>
+        <pre><%= "Optional comment: #{e.comments}"%></pre>
+        <% end %>
+      </li>
+    <%end%>
+  </ul>
+<%end%>
+<h4>
+  <div class="new_item button_actions"><%= link_to("New phone",new_person_phone_path) %></div>
+</h4>

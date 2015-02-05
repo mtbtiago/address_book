@@ -8,8 +8,7 @@ class Person < ActiveRecord::Base
     length: { maximum: 30 }
 
   def full_name
-    "#{self.id.to_s}. #{self.name}" + 
-    (self.address.present? ? "Addr: #{self.address}" : "")
+    "#{self.name}" + (self.address.present? ? ". Addr: #{self.address}" : "")
   end
 
 end

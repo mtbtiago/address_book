@@ -1,0 +1,11 @@
+<% if @email.errors.any? %>
+  <ul>
+    <% @email.errors.full_messages.each do |error_msg| %>
+    <li><%= error_msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Edit email for <%=link_to(@person.full_name,person_path(@person))%></h2>
+
+<%= render 'form' %>

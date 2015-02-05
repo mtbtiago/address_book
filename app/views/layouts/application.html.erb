@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AddressBook</title>
+  <title>Address Book</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>Address Book</h1>
+    
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+    
+  </header>
 
 <%= yield %>
 
+  <footer>
+    <h4>
+      <div class="new_item button_actions"><%= link_to("Home",'/') %></div>
+      <div class="all_items button_actions"><%= link_to("People",people_path) %></div>
+    </h4>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,31 @@
+h1 {
+  color: orange;
+}
+
+h2 {
+  color: blue;
+}
+
+.field_with_errors input {
+  color: yellow;
+  background-color: red;
+}
+
+.notice {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.button_actions {
+  display: inline;
+}
+.new_item {
+  color: green;
+}
+
+.all_items {
+  color: blue;
+}
